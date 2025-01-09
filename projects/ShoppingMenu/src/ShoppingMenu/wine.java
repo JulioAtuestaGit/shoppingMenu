@@ -1,17 +1,11 @@
 package ShoppingMenu;
 
-public abstract class Product {
-    private final String name;
-    private final String description;
-    private final double price;
-    private int stock;
+public final class wine {
+    private final String name ="vino";
+    private final String description ="Vino tinto dulce";
+    private final double price =101;
+    private int stock=12;
 
-    public Product (String name, String description, double price, int stock){
-        this.name=name;
-        this.description=description;
-        this.price=price;
-        this.stock=stock;
-    }
     @Override
     public String toString() {
         return "Producto: "+ name+
