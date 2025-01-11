@@ -9,5 +9,10 @@ public class Main {
         System.out.println("balance actual: ");
         balance=scanner.nextDouble(); //scanner includes methods to prevent typos exceptions in inputs
 
+        Wine waine = new Wine(3);
+        Car.addToCar(waine);
+        Car.inCar();
+        Car.removeFromCar(1,1);
+
     }
 }
