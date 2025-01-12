@@ -29,8 +29,11 @@ public abstract class Product {
             System.out.println();
         }
     }
-    public void setAmountInCar(int removed){
+    public void removeFromCar(int removed){
         amountInCar-=removed;
+    }
+    public void addToCAr(int added){
+        amountInCar+=added;
     }
     public String getName(){return name;}
     public int getAmountInCar(){return amountInCar;}
