@@ -19,10 +19,13 @@ public final class Car {
         input = scanner.nextInt();
         if (input ==products.size()){
             cleanCar();
+        }else {
+            manageItems(products.get(input-1));
+            inCar();
         }
     }
 
-    public void manageItems(Product product){
+    public static void manageItems(Product product){
             System.out.println("""
                     Opciones:
                     1. Aumentar cantidad
