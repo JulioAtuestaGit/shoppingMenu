@@ -16,17 +16,17 @@ public final class Car {
             System.out.print(" Cantidad: " + product.getAmountInCar() + "\n");
         }
         System.out.println(products.size()+1+". Empty Car");
-        input = scanner.nextInt();
+        input = scanner.nextInt()-1;
         if (input ==products.size()){
             cleanCar();
         }else {
-            manageItems(products.get(input-1));
+            manageItems(products.get(input));
             inCar();
         }
     }
 
     public static void manageItems(Product product){
-            System.out.println("""
+            System.out.println(product.getName()+" cantidad: "+ product.getAmountInCar()+ "\n"+"""
                     Opciones:
                     1. Aumentar cantidad
                     2. Disminuit cantidad
@@ -41,9 +41,12 @@ public final class Car {
                 case 2:
                     System.out.println("Cantidad a eliminar: ");
                     product.removeFromCar(scanner.nextInt());
+                    if (product.getAmountInCar()==0){
+                        products.remove(product);
+                    }
                     break;
                 case 3:
-                    product.removeFromCar(product.getAmountInCar());
+                    products.remove(product);
                     break;
                 default: break;
             }
